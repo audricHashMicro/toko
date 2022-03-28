@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="report_toko_order">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <h1>Kuitansi</h1>
+                    <h2>
+                        <div class="row">
+                            <div class="col-4">ID Order</div>
+                            <div class="col-8">: <span t-field="o.name"/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Nama Pelanggan</div>
+                            <div class="col-8">: <span t-field="o.pelanggan"/></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">Tanggal Pesan</div>
+                            <div class="col-8">: <span t-field="o.tanggal_pesan"/></div>
+                        </div>
+                    </h2>
+                    <h3>
+                        <div class="row">
+                            <div class="col-8">
+                            <table class="table-bordered">
+                                <tr>
+                                    <th>ID Produk</th>
+                                    <th>Produk</th>
+                                    <th>Kuantitas</th>
+                                    <th>Harga</th>
+                                </tr>
+
+                                <t t-foreach="o.orderproduk_ids" t-as="k">
+                                    <tr>
+                                        <td><span t-esc="k.produk_id.id_produk"/></td>
+                                        <td><span t-esc="k.produk_id.name"/></td>
+                                        <td><span t-esc="k.kuantitas"/></td>
+                                        <td><span t-esc="k.total_harga"/></td>
+                                    </tr>                           
+                                </t>
+                                <tr>
+                                    <td colspan="3">TOTAL</td>
+                                    <td><span t-esc="o.total"/></td>
+                                </tr>
+                            </table>
+                            </div>
+                        </div>
+                    </h3>
+                </div>
+            </t>
+        </t>
+    </t>    
+</template>    
+
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_toko_produk,access.toko.produk,model_toko_produk,,1,1,1,1
+access_toko_order,access.toko.order,model_toko_order,,1,1,1,1
+access_toko_orderprodukdetail,access.toko.orderprodukdetail,model_toko_orderprodukdetail,,1,1,1,1
+access_toko_purchase,access.toko.purchase,model_toko_purchase,,1,1,1,1
+access_toko_orderpurchasedetail,access.toko.orderpurchasedetail,model_toko_orderpurchasedetail,,1,1,1,1

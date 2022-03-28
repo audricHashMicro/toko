@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="report_toko_purchase" model="ir.actions.report">
+        <field name="name">Report Purchase Order</field>
+        <field name="model">toko.purchase</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">toko.report_toko_purchase</field>
+        <field name="report_file">toko.report_toko_purchase</field>
+        <field name="binding_model_id" ref="model_toko_purchase"/>
+        <field name="binding_type">report</field>
+    </record>
+
+</odoo>

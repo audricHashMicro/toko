@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- toko.produk form view -->
+    <record id="toko_produk_view_form" model="ir.ui.view">
+        <field name="name">Form Produk Baru</field>
+        <field name="model">toko.produk</field>
+        <field name="arch" type="xml">
+            <form string="Form Produk Baru">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="id_produk"/>
+                        <field name="name"/>
+                        <field name="kuantitas"/>
+                        <field name="harga_beli"/>
+                        <field name="harga_jual"/>
+                        <field name="deskripsi"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sequence_produk" model="ir.sequence">
+        <field name="name">Sequence</field>
+        <field name="code">toko.produk.sequence</field>
+        <field name="active">TRUE</field>
+        <field name="prefix">PRODUK</field>
+        <field name="padding">3</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <!-- toko.produk tree view -->
+    <record id="toko_produk_view_tree" model="ir.ui.view">
+        <field name="name">Produk</field>
+        <field name="model">toko.produk</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="id_produk"/>
+                <field name="name"/>
+                <field name="kuantitas"/>
+                <field name="harga_beli"/>
+                <field name="harga_jual"/>
+                <field name="deskripsi"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- toko.produk action window -->
+    <record id="toko_produk_action" model="ir.actions.act_window">
+        <field name="name">Daftar Produk</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">toko.produk</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem 
+        id="toko_produk_act" 
+        name="Produk" 
+        parent="toko_barang_categ" 
+        action="toko_produk_action" 
+        sequence="10"/>
+
+</odoo>
