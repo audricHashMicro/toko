@@ -37,7 +37,7 @@
             <form string="">
                 <header>
                     <button string="Bayar" name="action_bayar" type="object" class="btn-success" states="pesan"/>
-                    <button string="Diterima" name="action_terima" type="object" class="btn-primary" states="bayar"/>
+                    <button string="Diterima" name="action_terima" type="object" class="btn-warning" states="bayar"/>
                     <button string="Selesai" name="action_selesai" type="object" class="btn-success" states="terima"/>
                     <button string="Batal" name="action_selesai" type="object" class="btn-danger" states="pesan,bayar,terima"/>
                 </header>
